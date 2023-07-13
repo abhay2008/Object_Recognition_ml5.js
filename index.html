@@ -2,16 +2,25 @@
 <html lang="en">
 
 <head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
-  <script src="https://unpkg.com/ml5@0.5.0/dist/ml5.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <meta charset="utf-8" />
+  <!-- Add a placeholder for the Twitch embed -->
+<div id="twitch-embed"></div>
+
+<!-- Load the Twitch embed script -->
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+<!-- Create a Twitch.Player object with custom options -->
+<script type="text/javascript">
+  new Twitch.Player("twitch-embed", {
+    channel: "abhay_kashyap",
+    width: "100%",          // Set the width to 100% of the parent container
+    height: "600",          // Set a specific height (in pixels) for the player
+    autoplay: false,        // Enable or disable autoplay
+    muted: false,           // Enable or disable muted playback // Specify the parent domain(s) that are allowed to embed this Twitch player
+    allowfullscreen: true   // Enable or disable fullscreen mode
+  });
+</script>
+
 
 </head>
-
-<body>
-  <script src="sketch.js"></script>
-</body>
 
 </html>
